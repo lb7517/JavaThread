@@ -1,0 +1,5 @@
+注意:
+    1. IDEA调试多线程 shift+ctrl+f8 选择Thread
+    2. FairLock公平锁创建了QueueObject实例，对每个调用lock()的线程入队，unlock时从ArrayList数组中出队，达到公平
+    3. QueueObject实际是一个semaphore(信号量)。doWait()和doNotify()方法在QueueObject中保存着信号。这样做以避免一个线程在
+调用queueObject.doWait()之前被另一个调用unlock()并随之调用queueObject.doNotify()的线程重入，从而导致信号丢失
