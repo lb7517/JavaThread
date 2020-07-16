@@ -14,3 +14,5 @@ Eden 和 From 幸存区(survivor)中，GC运行时,Eden中的幸存对象被复�
 幸存对象，会考虑对象年龄,如果年龄没达到阀值(tenuring threshold)，对象会被复制到To 幸存区(survivor)。如果达到阀值对象被
 复制到老年代。复制阶段完成后，Eden 和From 幸存区中只保存死对象，可以视为清空。如果在复制过程中To 幸存区被填满了，剩余的
 对象会被复制到老年代中。最后 From 幸存区和 To幸存区会调换下名字，在下次GC时，To 幸存区会成为From 幸存区。
+
+C. javaConcurrentAnimated.jar是java并发包执行的动画服务
