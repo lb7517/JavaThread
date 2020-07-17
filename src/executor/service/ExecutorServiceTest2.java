@@ -11,6 +11,8 @@ import java.util.concurrent.*;
  */
 public class ExecutorServiceTest2 {
 
+    volatile int count = 1;
+
     private static void testInvokeAll () {
         ExecutorService executorService = Executors.newWorkStealingPool();
         List<Callable<String>> callables = Arrays.asList(
